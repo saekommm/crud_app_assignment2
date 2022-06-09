@@ -25,6 +25,8 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post.update!(post_params)
+    redirect_to posts_url, notice: 'Post was succesfully updated'
   end
 
   def destroy
